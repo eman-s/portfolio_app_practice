@@ -1,12 +1,18 @@
 body {
   background-color: #3F3D34;
 }
-nav{
-  padding-top: 40px;
+.navlinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .nav-title{
   font-family: Arizonia;
   font-size: 125%;
+}
+
+.selected {
+  color: red;
 }
 
 

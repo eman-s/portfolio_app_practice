@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // IMPORT LINK
-import { Link }from 'react-router-dom';
+import { NavLink }from 'react-router-dom';
 export default class BaseLayout extends Component {
   render(){
     // INLINE STYLING
@@ -23,43 +23,32 @@ export default class BaseLayout extends Component {
       "textShadow": "1px 1px 2px black",
       "fontFamily": "decorative",
     }
-    let navTitleMan ={
-      "fontFamily": "Russo One",
-      "fontSize": "120%",
-      "color": 'blue'
-    }
-    let navTitleMyth = {
-      "fontFamily": "Russo One",
-      "fontSize": "140%",
-      "color": "white"
-    }
     let navTitleLegend = {
       "fontFamily": "Russo One",
       "fontSize": "180%",
-      "color":"red"
+      'color':'white'
     }
+    let active = {
+      'text-decoration': 'none',
+      'color': '#3F3D34'
+    }
+
     return (
       <div className="container-fluid nav">
         <nav className="row navbar navbar-inverse">
           <div className="container-fluid">
-            <div className="navbar-header">
-              <ul className="nav navbar-nav">
-                <li style={navTitleMan}>
-                  <Link to='/home'>Man</Link>
-                </li>
+            <div className="navlinks">
 
-                <li style={navTitleMyth}>
-                    <Link to='/about'>Myth</Link>
-                </li>
-                <li style={navTitleLegend}>
-                    <Link to='/portfolio'>Legend</Link>
-                </li>
-                <li>
-                  <Link  activeClassName="selected" to="">
+                  <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/home'>Man</NavLink>
+
+                  <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/about'>Myth</NavLink>
+
+                    <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/portfolio'>Legend</NavLink>
+
+                  <NavLink style={navTitleLegend}  activeClassName="selected" to="">
                     <i className="fa fa-facebook" aria-hidden="true"></i>
-                  </Link>
-                </li>
-              </ul>
+                  </NavLink>
+
             </div>
           </div>
           <div
