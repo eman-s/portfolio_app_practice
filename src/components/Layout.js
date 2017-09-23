@@ -8,10 +8,6 @@ export default class BaseLayout extends Component {
       "fontFamily": 'Russo One',
       "fontSize": "18rem"
     }
-    let subtitleStyle = {
-      "fontFamily": "Ubuntu",
-      "fontSize": "10rem"
-    }
     let headerStyle = {
       "textAlign": "center",
       "height": "600px",
@@ -43,7 +39,11 @@ export default class BaseLayout extends Component {
 
                   <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/about'>Myth</NavLink>
 
-                    <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/portfolio'>Legend</NavLink>
+                  <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/portfolio'>Legend</NavLink>
+
+                  <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/references'>Endorsements</NavLink>
+
+                  <NavLink activeStyle={active} style={navTitleLegend} activeClassName="selected" to='/contact'>Contact</NavLink>
 
                   <NavLink style={navTitleLegend}  activeClassName="selected" to="">
                     <i className="fa fa-facebook" aria-hidden="true"></i>
@@ -51,17 +51,10 @@ export default class BaseLayout extends Component {
 
             </div>
           </div>
-          <div
-            className="col-lg-12 header"
-            style={headerStyle}>
+          <div className="col-lg-12 header" style={headerStyle}>
             <div className="header-title">
-              <div
-                className="restaurant-name"
-                style={titleStyle}>
+              <div style={titleStyle}>
                 Kim Jong Un
-              </div>
-              <div className="subtitle" style={subtitleStyle}>
-                Healthiest Leader In The World
               </div>
             </div>
           </div>
